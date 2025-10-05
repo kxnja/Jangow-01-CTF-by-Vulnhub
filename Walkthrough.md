@@ -50,7 +50,46 @@ Under the wordpress file we find a config.php file that we can open using the `c
 
 We find a username and a password in the config.php file.
 
+Copy and paste the code to a text editor. 
+Open the terminal try create an ftp connection with the target machine using the credentials provided.
 
+<img width="472" height="182" alt="image" src="https://github.com/user-attachments/assets/60a57e84-2ced-4415-b073-06ef10262886" />
+
+The connection fails due to invalid credentials so we need to continue looking for the legitimate credentials.
+
+Go back to your browser and using the `pwd` command we can print the working directory, which we find to be `/var/www/hrmal/site`.
+
+<img width="955" height="232" alt="image" src="https://github.com/user-attachments/assets/7b451e6c-dbcc-4f38-bcc6-2cecfd6a906e" />
+
+Using `ls -al /var/www/html` we can list all the directories and file in the directory.
+
+<img width="948" height="206" alt="image" src="https://github.com/user-attachments/assets/7a966a31-a084-4484-ba6f-5b051b35bb6e" />
+
+Here, we find a backip file that we can then open using `cat`.
+
+<img width="958" height="362" alt="image" src="https://github.com/user-attachments/assets/2eb4a66f-c546-44dd-a96f-11f05af83b15" />
+
+We find another username and password that we can then use to complete the ftp connection.
+
+<img width="441" height="196" alt="image" src="https://github.com/user-attachments/assets/8efa9cf1-5bb6-4bea-96ea-7363b4394ad7" />
+
+Upon trying the new set of credentials we successfully create a ftp connection.
+
+<img width="514" height="173" alt="image" src="https://github.com/user-attachments/assets/011f7c69-eac1-45d2-81b4-462c9dcbe5d7" />
+
+Change the directory to `/home` and using `ls` we find a `jangow01` directory and switching to it we find a `user.txt` file that we can download to our machine using the `get` command.
+
+<img width="955" height="390" alt="image" src="https://github.com/user-attachments/assets/87962d16-ab65-4615-848c-7384a189fb5c" />
+
+Using `ls` we can see the file on our machine and we can open it using `cat`.
+
+<img width="480" height="65" alt="image" src="https://github.com/user-attachments/assets/968b9981-3e83-48d6-88c0-0b68d65843ca" />
+
+## Step 3 : Privilege Escalation
+
+First we need to set up a reverse shell. There are several methods of doing this but since we are aware of the LFI (Local file inclusion) vulnerability we can add a php file that will enable remote connection.
+
+We can either write the php code on our on or get it on the internet.
 
 
 
