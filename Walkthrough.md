@@ -91,6 +91,9 @@ First we need to set up a reverse shell. There are several methods of doing this
 
 We can either write the php code on our on or get it on the internet.
 
+I got mine from the internet ` https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php `.
+Copy the code and using nano on the terminal save the file in a php file
+
 
 
 
